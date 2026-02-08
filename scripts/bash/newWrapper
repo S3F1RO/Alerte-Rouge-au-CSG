@@ -1,0 +1,15 @@
+#!/bin/bash
+
+#Create the bin file of the program
+wrapperName=${1%.*};
+gcc $1 -o $wrapperName;
+
+#Setting right to the real file as root
+sudo chown root:root $wrapperName.sh ; 
+sudo chmod 700 $wrapperName.sh
+
+#Giving the SUID to the wrapper
+sudo chown root:root $wrapperName; 
+sudo chmod 4755 $wrapperName;
+
+./$wrapperName;

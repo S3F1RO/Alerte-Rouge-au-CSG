@@ -1,0 +1,266 @@
+/*------------------------------------------------------------------------------
+	WEB : page design
+------------------------------------------------------------------------------*/
+
+
+
+/*==============================
+	Layout
+==============================*/
+
+/* Body & Wrapper */
+
+
+.wrapper{
+        margin: 0 auto 0 auto;
+}
+
+/*==============================
+	Style
+==============================*/
+
+/* Set font */
+* {
+	font-family: 'Ubuntu', 'Arial', 'Helvetica', 'Palatino', sans-serif;
+}
+
+/* Body & Wrapper */
+body {
+	/* background-color: #252323; */
+}
+.wrapper {
+	background-color: transparent;
+	padding: 0 10px;
+}
+/* #countdown{
+	margin: 30vh auto 0 auto;
+	text-align: center;
+	font-size: 20vh;
+	text-shadow: 30px 0px 40px rgba(255, 98, 0, 0.3);
+	color:#ff6200;
+
+} */
+input[name="flag"]{
+	width: 80vh;
+	height:3vh;
+	background-color: transparent;
+	color:white;
+	outline-color: #ff6200;
+}
+
+#teamName{
+	color:#ff8c33;
+}
+h1{
+	text-align: center;
+}
+nav{	
+		margin: 0;
+        /* display: block; */
+        height: 8vh;
+		/* width: 100vh; */
+		border-style: solid;
+		border-color: orangered;
+		border-radius: 2vh;
+        background-color: #02070d;
+		/* background: radial-gradient(circle at top, #0b1c2d, #02070d); */
+}
+nav ul{
+	height: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 0vh;
+}
+nav ul a{
+	text-decoration: none;
+	color:white;
+}
+#teamName{
+	display: block;
+	text-align: center;
+	font-size: 6vh;
+}
+table{
+	display: block;
+	margin: 0 auto 0 auto;
+}
+.leaderboard {
+	width: 90%;
+	max-width: 900px;
+	margin: 50px auto;           /* ← magic line */
+	background: #111;
+	border-radius: 16px;
+	border-color: white;
+	overflow: hidden;
+	box-shadow: 0 0 30px rgba(255, 98, 0, 0.3);
+}
+table-column{
+	margin-right: 10vh;
+}
+table {
+    table-layout: fixed;     /* ← THIS IS THE KEY */
+    width: 100%;
+}
+
+td, th {
+    width: 46% ; 
+    text-align: center;           /* optional: center everything */
+    padding: 16px 10px;
+    box-sizing: border-box;
+	color:white;
+	background-color: #02070d;
+	border-style: solid;
+	border-width: 0.1vh;
+	/* border-color: white; */
+}
+th    { background: linear-gradient(90deg, #ff6200, #ff8c33); color: black; padding: 16px; }
+
+form[action="addUser.php"]{
+	border-style: solid;
+	border-color: #ff6200;
+	border-radius: 1vh;
+	border-width: 0.1vh;
+	box-shadow: 0 0 30px rgba(255, 98, 0, 0.3);
+
+}
+form[action="addUser.php"] input[type="submit"]{
+	background-color:#ff6200;
+	border-radius:0;
+
+}
+p{
+	text-align: center;
+}
+p a{
+	text-decoration: none;
+	color:#ff8c33
+}
+a{
+	text-decoration:underline;
+	color: white;
+}
+
+header a{
+    position:absolute;
+    top:1.5vh;
+    left:3vh;
+}
+a i.icon{
+    font-size:8vh;
+}
+
+/* Chat GPT */
+    body {
+        margin: 0;
+        background: radial-gradient(circle at top, #0b1c2d, #02070d);
+		color: #e6f1ff;
+        font-family: "Segoe UI", monospace;
+    }
+
+    header {
+        padding: 20px;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+        text-align: center;
+    }
+
+    header h1 {
+        margin: 0;
+        font-size: 32px;
+        letter-spacing: 2px;
+    }
+
+    header span {
+        color: #ff6200;
+        font-size: 14px;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .panel {
+        background: rgba(255,255,255,0.03);
+        border: 1px solid rgba(255,255,255,0.1);
+        border-radius: 8px;
+        padding: 80px;
+		box-shadow: 0 0 10px rgb(255, 98, 0);
+    }
+
+    .panel h2 {
+        margin-top: 0;
+        font-size: 18px;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+        padding-bottom: 8px;
+    }
+
+    #countdown {
+        font-size: 64px;
+        text-align: center;
+        color: #ff6200;
+        text-shadow: 0 0 25px rgba(255,98,0,0.6);
+    }
+
+    .telemetry {
+        line-height: 1.8;
+    }
+
+    .ok {
+        color: #3aff7a;
+    }
+
+    .warn {
+        color: #ffcc00;
+    }
+
+    .fail {
+        color: #ff4444;
+    }
+
+    footer {
+        position:fixed;
+        bottom:0;
+        width:100%;
+        text-align: center;
+        font-size: 12px;
+        padding: 10px;
+        opacity: 0.5;
+    }
+
+/*==============================
+Classes
+==============================*/
+
+
+
+
+
+/*==============================
+	Responsive design
+==============================*/
+
+/* Media query : mobile */
+@media (max-width: 600px) {
+
+
+}
+
+
+
+/* Media query : tablet */
+@media (min-width: 600px) and (max-width: 1200px) {
+
+
+}
+
+
+
+/* Media query : laptop */
+@media (min-width: 1200px) {
+
+
+}

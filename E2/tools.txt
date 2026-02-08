@@ -1,0 +1,10 @@
+Trouver les métadonnées de l'image :
+exiftool
+
+extraire une information d'une image:
+steghide extract -sf ariane6Hacked.jpeg
+
+Cacher les information dans une image:
+steghide embed -ef flag.txt -cf ariane6.jpeg 
+
+changer des champs metadata avec exiftool

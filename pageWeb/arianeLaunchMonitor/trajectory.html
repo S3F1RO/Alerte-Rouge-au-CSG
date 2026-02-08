@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Rocket Orientation Control</title>
+<script type='text/javascript' src='./js/jquery-3.7.0.min.js'></script>
+<script type='text/javascript' src='./js/jquery-ui.min.js'></script>
+<link rel='stylesheet' type='text/css' href='./css/web.css' media='screen' />
+<link rel='stylesheet' type='text/css' href='./css/03_icons.css' media='screen' />
+<!-- <script type='text/javascript' src='./js/ajxDisplayCountdown.js'></script> -->
+<script type='text/javascript' src='./js/ajxGuideRocket.js'></script>
+
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: radial-gradient(circle, #0b1c2d, #02070d);
+        color: #fff;
+        font-family: monospace;
+    }
+
+    #rocket-container {
+        width: 200px;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #rocket {
+        width: 80px;
+        height: 200px;
+        background: linear-gradient(#ddd, #999);
+        clip-path: polygon(
+            50% 0%,
+            70% 15%,
+            70% 80%,
+            85% 90%,
+            85% 100%,
+            15% 100%,
+            15% 90%,
+            30% 80%,
+            30% 15%
+        );
+        transform-origin: center center;
+        rotate: 45deg;
+        transition: transform 0.2s ease;
+    }
+
+    .controls {
+        margin-top: 30px;
+        display: flex;
+        gap: 40px;
+    }
+
+    button {
+        width: 70px;
+        height: 70px;
+        font-size: 30px;
+        background: rgba(255,255,255,0.1);
+        color: #fff;
+        border: 1px solid rgba(255,255,255,0.3);
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background: rgba(255,255,255,0.2);
+    }
+    input[name="flag"]{
+    	width: 80vh;
+        height:3vh;
+        background-color: transparent;
+        color:white;
+        outline-color: #ff6200;
+        border-color: #ff6200;
+        border-radius: 4vh;
+        padding: 4vh;
+    }
+    .fail {
+        color: #ff4444;
+    }
+</style>
+</head>
+
+<body>
+    <header>
+        <a href="./interface.php"><i class='icon'>&#xe5c4;</i></a>
+    </header>
+    <p>Géré par le PC de positionnement : Garry</p>
+    <div id="rocket-container">
+        <div id="rocket"></div>
+    </div>
+    <input type='text' name='flag' placeholder='flag'/>
+    <p class="status fail">DISALIGNED</p>
+    <div class="controls">
+        <button id="left">⟵</button>
+        <button id="right">⟶</button>
+    </div>
+</body>
+</html>

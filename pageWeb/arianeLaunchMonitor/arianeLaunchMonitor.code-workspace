@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../alerteRougeAuCSG"
+		},
+		{
+			"path": "../R310-Ressources/R310-PiochePHP"
+		}
+	],
+	"settings": {}
+}

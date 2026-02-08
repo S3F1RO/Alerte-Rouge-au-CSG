@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Delete the old one 
+rm -r /home/charlie.novembre/Images
+
+# Replace it with the new one 
+mkdir -p /home/charlie.novembre/Images/{CSG,vacances2024-2025}
+mv ../../Assets/imagesCSG/* /home/charlie.novembre/Images/CSG
+mv ../../Assets/imagesFamille/* /home/charlie.novembre/Images/vacances2024-2025
+
+history -c

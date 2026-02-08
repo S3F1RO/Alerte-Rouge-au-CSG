@@ -1,0 +1,1147 @@
+/*------------------------------------------------------------------------------
+	WEB : page design
+------------------------------------------------------------------------------*/
+
+
+/*==============================
+	PARAMS
+==============================*/
+
+:root {
+	/* Layout */
+		/* Wrapper */
+		--layout-wrapper-width: 1200px;
+
+		/* Header */
+		--layout-header-height: 80px;
+
+
+
+	/* Font */
+		/* Main */
+		--font-main: 'Ubuntu', 'Arial', 'Helvetica', 'Palatino', sans-serif;
+		--font-input: 'Ubuntu', 'Arial', 'Helvetica', 'Palatino', sans-serif;
+
+
+
+	/* Color */
+		/* Primary : user I/O (blue) */
+		--color-primary: #5599ff;
+			--color-primary-trans1: #5599ffdd;
+			--color-primary-trans2: #5599ff88;
+			--color-primary-trans3: #5599ff22;
+			--color-primary-trans4: #5599ff11;
+		--color-primary-light1: #80b3ff;
+		--color-primary-light2: #aaccff;
+
+		/* Valid + invalid */
+		--color-valid: #78d944;
+		--color-invalid: #c90c01;
+
+		/* By function */
+		--color-body-bg: #ffffff;
+		--color-wrapper-bg: #ffffffaa;
+		--color-selected-text: #ffffff;
+		--color-input-bg: #f9f9f9;
+
+
+
+	/* Opacity */
+	--opacity-bodyImg: 0.7;
+
+
+
+	/* Clip path */
+	--clipPath-main: polygon(0% 10px, 15px 0%, calc(100% - 130px) 0%, 100% 40px, 100% calc(100% - 10px), calc(100% - 15px) 100%, 130px 100%, 0% calc(100% - 40px));
+
+}
+
+
+/* #181a1f : Black */
+/* #21252b : Dark gray */
+/* #3a3f4b : Light gray */
+/* #4d515a : Light light gray */
+/* #6a6f79 : Light light light gray */
+/* #9a9ea7 : Dark dark white */
+/* #caced5 : Dark white */
+/* #e5eaf2 : White */
+/* #5599ff : Blue */
+/* #80b3ff : Light blue */
+/* #aaccff : Light light blue */
+/* #983b30 : Red */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*******************************************************************************
+	GENERAL
+*******************************************************************************/
+
+
+
+
+
+/*==============================
+	Layout
+==============================*/
+
+/* Body & Wrapper */
+body {
+	margin: 0;
+	padding: 0;
+}
+body > img {
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: -10;
+	width: 100vw;
+	height: 100vh;
+	object-fit: cover;
+}
+.wrapper {
+	max-width: var(--layout-wrapper-width);
+	min-height: 100vh;
+}
+
+
+
+/* Header */
+
+
+
+/* Section */
+
+
+
+/* Aside */
+
+
+
+/* Footer */
+
+
+
+/* Text */
+ul {
+	display: flex;
+	flex-direction: column;
+}
+
+
+
+/* Image */
+
+
+
+/* Input */
+
+
+
+
+
+
+
+
+
+
+/*==============================
+	Style
+==============================*/
+
+/* Font & Hightlight */
+* {
+	font-family: var(--font-main);
+}
+*::selection {
+	color: var(--color-selected-text);
+	background-color: var(--color-primary);
+}
+
+/* Body & Wrapper */
+body {
+	background-color: var(--color-body-bg);
+}
+.wrapper {
+	background-color: var(--color-wrapper-bg);
+	/* clip-path: polygon(0% 10px, 15px 0%, calc(100% - 130px) 0%, 100% 40px, 100% calc(100% - 10px), calc(100% - 15px) 100%, 130px 100%, 0% calc(100% - 40px)); */
+}
+body > img {
+	opacity: var(--opacity-bodyImg);
+}
+
+
+
+
+
+/* Header */
+
+
+
+
+
+/* Section */
+section {
+}
+
+
+
+
+
+/* Article */
+section article {
+	margin: 0 1vw 20vw 1vw;
+	padding: 5vw;
+	border-style: none solid none solid;
+	border-color: transparent var(--color-primary-trans3) transparent var(--color-primary-light2);
+	border-width: 0.8vw;
+	background-color: var(--color-primary-trans3);
+	clip-path: var(--clipPath-main);
+}
+
+
+
+
+
+/* Text */
+ul {
+	margin: 5vw 0;
+	padding: 0;
+	list-style: none;
+}
+
+
+
+
+
+/* Image */
+
+
+
+
+
+/* Input */
+	/* Placeholder */
+	*::placeholder {
+		opacity: 1;
+	  color: var(--color-primary-trans2);
+	}
+	*:focus::placeholder {
+		opacity: 0.5;
+	  color: var(--color-selected-text);
+	}
+
+
+	/* Input, Textarea, Select */
+	label, input, textarea, select, button, .userInput, li.optionBox {
+		display: inline-block;
+		width: 100%;
+		box-sizing: border-box;
+		margin: 2vw 0;
+		padding: 2vw 4vw;
+		outline-style: solid;
+		outline-width: 0.3vw;
+		outline-color: var(--color-primary-light2);
+		border: none;
+		border-radius: 0.75vw;
+		background-color: var(--color-input-bg);
+		font-family: var(--font-input);
+		font-size: 3vw;
+		font-weight: lighter;
+		color: var(--color-primary);
+		transition: 300ms;
+	}
+	textarea {
+		resize: none;
+	}
+	input:hover, textarea:hover, select:hover, .userInput:hover {
+		outline-color: var(--color-primary-light1);
+		outline-offset: 0.5vw;
+		background-color: var(--color-primary-trans3);
+	}
+	input:focus, textarea:focus, select:focus, .userInput.selected {
+		outline-color: var(--color-primary);
+		outline-offset: 1vw;
+		background-color: var(--color-primary-light2);
+		color: var(--color-selected-text);
+	}
+
+
+	/* Label, Checkbox, Radio */
+		/* Label */
+		label {
+			position: relative;
+			min-height: 5.5vw;
+			margin: 0.5vw 0;
+			padding: 1vw 12vw;
+			outline-color: var(--color-primary-trans3);
+			background-color: var(--color-primary-trans4);
+			user-select: none;
+			cursor: pointer;
+		}
+		label:not(.floatingPlaceholder):hover {
+			outline-color: var(--color-primary-light1);
+			background-color: var(--color-primary-trans3);
+		}
+		label:not(.floatingPlaceholder):active {
+			outline-color: var(--color-primary);
+			outline-offset: 0.5vw;
+			background-color: var(--color-primary-trans2);
+		}
+
+		/* Option box for checkbox and radio */
+		li.optionBox:hover {
+			outline-color: var(--color-primary-light1);
+			outline-offset: 0.5vw;
+		}
+		li.optionBox > label.floatingPlaceholder {																										/* Design floatingPlaceholder */
+			top: -2vw;
+		}
+		li.optionBox:hover > label.floatingPlaceholder {																										/* Design floatingPlaceholder */
+			top: -2.5vw;
+			outline-color: var(--color-primary-light1);
+		}
+
+		/* Checkbox & Radio */
+		label > input[type='checkbox'], label > input[type='radio'] {								/* Hide default checkbox */
+			position: absolute;
+			height: 0;
+			width: 0;
+			opacity: 0;
+		}
+		label > input[type='checkbox'] + span, label > input[type='radio'] + span {	/* Build new checkbox */
+			position: absolute;
+		  top: 0.75vw;
+		  left: 4vw;
+		  height: 4vw;
+		  width: 4vw;
+		  border-radius: 0.5vw;
+		  background-color: var(--color-primary-trans3);
+			transition: 300ms;
+		}
+		label:hover > input[type='checkbox'] + span {																/* Hover */
+			background-color: var(--color-primary-trans2);
+		}
+		label > input[type='checkbox']:checked + span {															/* Check */
+			background-color: var(--color-primary);
+		}
+
+		/* Checkbox */
+		label > input[type='checkbox'] + span::before {															/* Build new checkmark (before+after) */
+			content: "";
+			display: block;
+		  position: absolute;
+			left: 1vw;
+		  top: 1.7vw;
+		  width: 2vw;
+		  height: 0;
+		  border: solid var(--color-selected-text);
+		  border-width: 0.35vw 0 0.35vw 0;
+		  border-radius: 100px;
+		  transition: 300ms;
+		}
+		label > input[type='checkbox'] + span::after {
+			content: "";
+			display: block;
+		  position: absolute;
+			left: 0.5vw;
+		  top: 1.7vw;
+		  width: 3vw;
+		  height: 0;
+		  border: solid var(--color-selected-text);
+		  border-width: 0.35vw 0 0.35vw 0;
+		  border-radius: 100px;
+		  transition: 300ms;
+		}
+		label > input[type='checkbox']:checked + span::before {											/* Check : animate before+after */
+			transform: translate(-0.35vw, 0.4vw) rotate(55deg);
+		}
+		label > input[type='checkbox']:checked + span::after {
+			transform: translate(0.5vw, -0.1vw) rotate(-65deg);
+		}
+
+		/* Radio */
+		label > input[type='radio'] + span {																				/* Build new checkbox */
+		  border-radius: 5vw;
+		}
+		label > input[type='radio'] + span::before {																/* Build new checkmark (before) */
+			content: "";
+			display: block;
+		  position: absolute;
+			left: 1.95vw;
+		  top: 1.95vw;
+		  width: 0.1vw;
+		  height: 0.1vw;
+		  border-radius: 100px;
+			background-color: var(--color-selected-text);
+		  transition: 300ms;
+		}
+		label:hover > input[type='radio'] + span {																	/* Hover */
+			background-color: var(--color-primary-trans2);
+		}
+		label > input[type='radio']:checked + span {																/* Check : animate before+after */
+		  background-color: var(--color-primary);
+		}
+		label > input[type='radio']:checked + span::before {
+			transform: scale(20);
+		}
+
+
+	/* Button */
+	button, input[type='submit'] {
+		border-radius: 20%;
+		outline-color: var(--color-primary);
+		background-color: var(--color-primary);
+		color: var(--color-selected-text);
+	}
+	button:hover, input[type='submit']:hover {
+		outline-offset: 0.5vw;
+		background-color: var(--color-primary-light1);
+		text-shadow: 0 0 1px var(--color-selected-text);
+	}
+	button:active, input[type='submit']:active {
+		outline-offset: 1vw;
+		background-color: var(--color-primary-light2);
+		text-shadow: 0 0 3px var(--color-selected-text);
+	}
+	button:first-of-type, input[type='submit']:first-of-type {
+		margin-top: 10vw;
+	}
+
+
+	/* Validation */
+	.validate:invalid, input.isInvalid, textarea.isInvalid, select.isInvalid {
+		outline-color: var(--color-invalid);
+	}
+	.validate:valid, input.isValid, textarea.isValid, select.isValid {
+		outline-color: var(--color-valid);
+	}
+
+
+	/* Floating placeholder */
+	li {																																					/* Set parent position */
+		position: relative;
+	}
+	label.floatingPlaceholder {																										/* Design floatingPlaceholder */
+		display: block;
+		position: absolute;
+		left: 4vw;
+		top: 0;
+		width: auto;
+		min-height: 0;
+		margin: 0;
+		padding: 0.5vw 2vw;
+		background-color: var(--color-primary-light2);
+		font-size: 2vw;
+		font-weight: bolder;
+		color: var(--color-selected-text);
+	}
+	:hover + label.floatingPlaceholder {																					/* Move to follow outline */
+		top: -0.5vw;
+		outline-color: var(--color-primary-light1);
+	}
+	:focus + label.floatingPlaceholder {																					/* Hide on focus */
+		top: -1vw;
+		outline-color: var(--color-primary);
+		transform: rotateX(90deg);
+	}
+	label.floatingPlaceholder.hidden {																						/* Hide from JS (.hidden) */
+		transform: rotateX(90deg);
+	}
+	.validate:invalid + label.floatingPlaceholder, .isInvalid + label.floatingPlaceholder {																/* Invalid color */
+		outline-color: var(--color-invalid);
+		background-color: var(--color-invalid);
+	}
+	.validate:valid + label.floatingPlaceholder, .isValid + label.floatingPlaceholder {																	/* Valid color */
+		outline-color: var(--color-valid);
+		background-color: var(--color-valid);
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*******************************************************************************
+	RESPONSIVE - MOBILE
+*******************************************************************************/
+@media (max-width: 1200px) {
+	/*==============================
+		Layout
+	==============================*/
+
+	/* Body & Wrapper */
+
+
+
+	/* Header */
+
+
+
+	/* Section */
+
+
+
+	/* Article */
+
+
+
+	/* Aside */
+
+
+
+	/* Footer */
+
+
+
+	/* Text */
+
+
+
+	/* Image */
+
+
+
+	/* Input */
+
+
+
+
+
+
+
+
+
+
+	/*==============================
+		Design
+	==============================*/
+
+	/* Body & Wrapper */
+
+
+
+	/* Header */
+
+
+
+	/* Section */
+
+
+
+	/* Article */
+
+
+
+	/* Aside */
+
+
+
+	/* Footer */
+
+
+
+	/* Text */
+
+
+
+	/* Image */
+
+
+
+	/* Input */
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*******************************************************************************
+	RESPONSIVE - TABLET
+*******************************************************************************/
+@media (min-width: 600px) and (max-width: 1200px) {
+	/*==============================
+		Layout
+	==============================*/
+
+	/* Body & Wrapper */
+
+
+
+	/* Header */
+
+
+
+	/* Section */
+
+
+
+	/* Article */
+	section article {
+		margin: 0 50px 200px 50px;
+	}
+
+
+
+	/* Aside */
+
+
+
+	/* Footer */
+
+
+
+	/* Text */
+
+
+
+	/* Image */
+
+
+
+	/* Input */
+
+
+
+
+
+
+
+
+
+
+	/*==============================
+		Design
+	==============================*/
+
+	/* Body & Wrapper */
+
+
+
+	/* Header */
+
+
+
+	/* Section */
+
+
+
+	/* Article */
+
+
+
+	/* Aside */
+
+
+
+	/* Footer */
+
+
+
+	/* Text */
+
+
+
+	/* Image */
+
+
+
+	/* Input */
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*******************************************************************************
+	RESPONSIVE - TABLET & DESKTOP
+*******************************************************************************/
+@media (min-width: 600px) {
+	/*==============================
+		Layout
+	==============================*/
+
+	/* Body & Wrapper */
+
+
+
+	/* Header */
+
+
+
+	/* Section */
+
+
+
+	/* Article */
+	section article {
+		padding: 80px;
+		border-width: 3px;
+	}
+
+
+
+	/* Aside */
+
+
+
+	/* Footer */
+
+
+
+	/* Text */
+	ul {
+		margin: 75px auto 0 auto;
+		max-width: 500px;
+	}
+
+
+
+	/* Image */
+
+
+
+	/* Input */
+		/* Input, Textarea, Select */
+		label, input, textarea, select, button, .userInput, li.optionBox {
+			display: block;
+			width: 100%;
+			margin: 15px auto;
+			padding: 10px 20px;
+			outline-width: 1.5px;
+			border-radius: 5px;
+			font-size: 18px;
+			transition: 300ms;
+		}
+		input:hover, textarea:hover, select:hover, .userInput:hover {
+			outline-offset: 3px;
+		}
+		input:focus, textarea:focus, select:focus, .userInput.selected {
+			outline-offset: 5px;
+		}
+
+
+		/* Label, Checkbox, Radio */
+			/* Label */
+			label {
+				min-height: 30px;
+				margin: 10px 0;
+				padding: 7px 80px;
+			}
+			label:not(.floatingPlaceholder):active {
+				outline-offset: 3px;
+			}
+
+			/* Option box for checkbox and radio */
+			li.optionBox:hover {
+				outline-offset: 3px;
+			}
+			li.optionBox > label.floatingPlaceholder {																/* Design floatingPlaceholder */
+				top: -10px;
+			}
+			li.optionBox:hover > label.floatingPlaceholder {													/* Design floatingPlaceholder */
+				top: -13px;
+			}
+
+			/* Checkbox & Radio */
+			label > input[type='checkbox'] + span, label > input[type='radio'] + span {	/* Build new checkbox */
+				position: absolute;
+			  top: 5px;
+			  left: 25px;
+			  height: 25px;
+			  width: 25px;
+			  border-radius: 5px;
+			}
+
+			/* Checkbox */
+			label > input[type='checkbox'] + span::before {														/* Build new checkmark (before+after) */
+				left: 3px;
+			  top: 11px;
+			  width: 13px;
+			  border-width: 2px 0 2px 0;
+			}
+			label > input[type='checkbox'] + span::after {
+				left: 3px;
+			  top: 11px;
+			  width: 20px;
+			  border-width: 2px 0 2px 0;
+			}
+			label > input[type='checkbox']:checked + span::before {										/* Check : animate before+after */
+				transform: translate(0px, 2px) rotate(55deg);
+			}
+			label > input[type='checkbox']:checked + span::after {
+				transform: translate(3px, 0px) rotate(-65deg);
+			}
+
+			/* Radio */
+			label > input[type='radio'] + span {																			/* Build new checkbox */
+			  border-radius: 100px;
+			}
+			label > input[type='radio'] + span::before {															/* Build new checkmark (before) */
+				left: 12px;
+			  top: 12px;
+			  width: 0.6px;
+			  height: 0.6px;
+			}
+
+		/* Button */
+		button, input[type='submit'] {
+			border-radius: 20%;
+		}
+		button:hover, input[type='submit']:hover {
+			outline-offset: 3px;
+		}
+		button:active, input[type='submit']:active {
+			outline-offset: 5px;
+		}
+		button:first-of-type, input[type='submit']:first-of-type {
+			margin-top: 70px;
+		}
+
+		/* Floating placeholder */
+		label.floatingPlaceholder {																									/* Design floatingPlaceholder */
+			left: 20px;
+			top: 5px;
+			padding: 2px 12px;
+			font-size: 11px;
+		}
+		:hover + label.floatingPlaceholder {																				/* Move to follow outline */
+			top: 2px;
+		}
+		:focus + label.floatingPlaceholder {																				/* Hide on focus */
+			top: 0px;
+		}
+
+
+
+
+
+
+
+
+
+
+	/*==============================
+		Design
+	==============================*/
+
+	/* Body & Wrapper */
+
+
+
+	/* Header */
+
+
+
+	/* Section */
+
+
+
+	/* Article */
+
+
+
+	/* Aside */
+
+
+
+	/* Footer */
+
+
+
+	/* Text */
+
+
+
+	/* Image */
+
+
+
+	/* Input */
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*******************************************************************************
+	RESPONSIVE - DESKTOP
+*******************************************************************************/
+@media (min-width: 1200px) {
+	/*==============================
+		Layout
+	==============================*/
+
+	/* Body & Wrapper */
+
+
+
+	/* Header */
+
+
+
+	/* Section */
+
+
+
+	/* Article */
+
+
+
+	/* Aside */
+
+
+
+	/* Footer */
+
+
+
+	/* Text */
+
+
+
+	/* Image */
+
+
+
+	/* Input */
+
+
+
+
+
+
+
+
+
+
+	/*==============================
+		Design
+	==============================*/
+
+	/* Body & Wrapper */
+
+
+
+	/* Header */
+
+
+
+	/* Section */
+
+
+
+	/* Article */
+
+
+
+	/* Aside */
+
+
+
+	/* Footer */
+
+
+
+	/* Text */
+
+
+
+	/* Image */
+
+
+
+	/* Input */
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* @media (max-width: 600px) {
+	section {
+		background-color: red;
+	}
+}
+@media (min-width: 600px) and (max-width: 700px) {
+	section {
+		background-color: orange;
+	}
+}
+@media (min-width: 700px) and (max-width: 800px) {
+	section {
+		background-color: yellow;
+	}
+}
+@media (min-width: 800px) and (max-width: 900px) {
+	section {
+		background-color: green;
+	}
+}
+@media (min-width: 900px) and (max-width: 1000px) {
+	section {
+		background-color: cyan;
+	}
+}
+@media (min-width: 1000px) and (max-width: 1100px) {
+	section {
+		background-color: pink;
+	}
+}
+@media (min-width: 1100px) and (max-width: 1200px) {
+	section {
+		background-color: purple;
+	}
+}
+@media (min-width: 1200px) {
+	section {
+		background-color: grey;
+	}
+} */

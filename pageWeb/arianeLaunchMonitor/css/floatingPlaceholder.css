@@ -1,0 +1,100 @@
+/*------------------------------------------------------------------------------
+	WEB : Floating Placeholder
+------------------------------------------------------------------------------*/
+
+
+/* Position parent <li> */
+ul.floatingPlaceholder > li {
+	position: relative;
+}
+
+
+
+
+
+
+/* Absolute label */
+ul.floatingPlaceholder > li > label {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	color: transparent;
+	/* background-color: #FF000011; */
+}
+
+
+/* Absolute label */
+ul.floatingPlaceholder > li > *:focus + label {
+	/* display: block;
+	top: -1px;
+	left: 15px;
+	font-size: 9px;
+	transition: 300ms;
+	color: black; */
+	left: auto;
+	right: 15px;
+	font-size: 6vw;
+	font-style: italic;
+	font-weight: bolder;
+	color: #FFFFFF22;
+	transition: 500ms;
+}
+
+
+
+
+
+/* Absolute label */
+/* ul.floatingPlaceholder > li > label {
+	display: block;
+  position: absolute;
+  top: 50%;
+	left: 0;
+  transform: translateY(-50%);
+	font: inherit;
+	background-color: #FF000011;
+} */
+
+
+/* Stay if valid */
+/* ul.floatingPlaceholder > li > *:focus + label {
+	top: 0;
+	left: 0;
+	font-size: 50%;
+  transition: 300ms;
+}
+ul.floatingPlaceholder > li > *:valid + label {
+	transform: translateY(-100%) scale(0.75);
+	color: green;
+  transition: 300ms;
+} */
+
+
+
+
+
+
+
+/* Absolute label */
+/* ul.floatingPlaceholder > li > label {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	background-color: #FF000011;
+} */
+
+
+/* Absolute label */
+/* ul.floatingPlaceholder > li > *:focus + label {
+	display: block;
+	top: -5px;
+	left: 5px;
+	color: black;
+  transition: 300ms;
+} */
