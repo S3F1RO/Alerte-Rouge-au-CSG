@@ -17,7 +17,7 @@ Vous aurez à disposition votre interface de gestion web où vous retrouverez to
 
 ## 🧩Enigme 1 :
 [Lien vers la mise en place de l'Enigme 1](E1/presentationE1.md)  
-Dans cette première énigme, le but sera de découvrir qui sont les assaillants et trouver le mot de passe.
+Dans cette première énigme, le but sera de découvrir qui sont les assaillants et trouver le mot de passe grâce au message présent sur la radio  
 mdp : RIP_csgariane  
 
 ## 🧩Enigme 2 (MA1) :
